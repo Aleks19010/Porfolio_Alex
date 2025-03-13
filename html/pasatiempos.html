@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/Logo_Pagina.ico" type="image/x-icon">
+    <link href="/src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/input.css">
+    <script src="/js/cotener.js"></script>
+    <title>Portafolio</title>
+</head>
+<header>
+    <nav class="bg-red-800">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="hidden md:block">
+                        <div class="flex space-x-4">
+                            <a href="/index.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                            <a href="/html/pasatiempos.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Pasatiempos</a>
+                            <a href="/html/redes_socales.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="menu" class="hidden md:hidden">
+            <div class="flex flex-col space-y-1 px-2 pb-2">
+                <a href="#inicio" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                <a href="#proyectos" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Proyectos</a>
+                <a href="#redes-sociales" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Redes sociales</a>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<body>
+    <section><!--Apartado 3: Pasatiemos-->
+        <div class="max-w-2x2 mx-auto p-6 bg-white rounded-lg shadow-lg mt-10">
+            <h2 class="text-3xl font-bold text-center text-red-600 mb-4">Mis Pasatiempos</h2>
+            <p class="text-gray-700 text-justify mb-4">
+                En mi tiempo libre, disfruto de diversas actividades que me ayudan a relajarme y a ser más creativo. Aquí hay algunos de mis pasatiempos favoritos:
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Fotografía</h3>
+                    <img src="/img/pasatiempo_fotografia.jpg" alt="Fotografía" class="w-full h-72 object-cover rounded-md mb-2">
+                    <p class="text-gray-600">Me encanta capturar momentos y explorar la belleza de la naturaleza a través de mi lente.</p>
+                </div>
+                
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Viajes</h3> 
+                    <img src="/img/pasatiempo_viajes.jpg" alt="Viajes" class="w-full h-72 object-cover rounded-md mb-2">
+                    <p class="text-gray-600">Viajar me permite conocer nuevas culturas ydisfrutar de la diversidad del mundo.</p>
+                </div>
+        
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Lectura</h3>
+                    <img src="/img/pasatiempo_lectura.jpg" alt="Lectura" class="w-full h-72 object-cover rounded-md mb-2">
+                    <p class="text-gray-600">La lectura es una de mis pasiones, disfruto sumergirme en diferentes historias y aprender de ellas.</p>
+                </div>
+        
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Musica</h3>
+                    <img src="/img/pasatiempo_musica.jpg" alt="Musica" class="w-full h-72 object-cover rounded-md mb-2">
+                    <p class="text-gray-600">La musica es fundamental en mi, crear, o aprender nuevas cancions me llena de vida.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/Logo_Pagina.ico" type="image/x-icon">
+    <link href="/src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/input.css">
+    <script src="/js/cotener.js"></script>
+    <title>Portafolio</title>
+</head>
+<header>
+    <nav class="bg-red-800">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="hidden md:block">
+                        <div class="flex space-x-4">
+                            <a href="/index.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                            <a href="/html/pasatiempos.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Pasatiempos</a>
+                            <a href="/html/redes_socales.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="menu" class="hidden md:hidden">
+            <div class="flex flex-col space-y-1 px-2 pb-2">
+                <a href="#inicio" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                <a href="#proyectos" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Proyectos</a>
+                <a href="#redes-sociales" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Redes sociales</a>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<body>
+    <div class="max-w-4x2 mx-auto p-6 bg-white rounded-lg shadow-lg mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Formulario de Contacto -->
+        <div>
+            <h2 class="text-3xl font-bold text-center text-red-600 mb-4">Contacto</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Nombre</label>
+                    <input type="text" id="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700">Mensaje</label>
+                    <textarea id="message" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-red-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition duration-200">Enviar</button>
+            </form>
+        </div>
+    
+        <!-- Sección de Redes Sociales -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-red-600 mb-4 text-center">Sígueme en Redes Sociales</h3>
+            <div class="flex justify-around">
+                <a href="#" class="text-red-600 hover:text-blue-800 transition duration-200">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABMBJREFUaEPtmm3InmMYx3+zlpdQZmKUt22GZHlptshbPs0Wm5hJSIka28zUhJQpIWILI2LW8vJh3vmgsCZMs2nGFoaRKYqy5iV5Of+6Hq7dz677+F/X9Tzu697zHF+eD+f/PM7j/xz3ebyd1xAGmAwZYHwZJLyze3zQww318BXAHcA+bezbCJwFfNOOQzd4eD/gc2BPwxkHA193O+EHgasMsvcC10a4pnv4aGA9hNnkR+BQ4KduJ/wmcFpEApiT7vd9Bi78zzk6+gszCXjZUP4ZcCTwh4FtLOGhgKLuaIPEucDzBu4fSFPv8NXAIoPECuB0A/cvpImE9wa+DHKuCPwFHAN83O2E707Rdq5B4jHgcgO3HaSshy8EngwO2QBcDKwpawxwOLDJ2PcLMAr41sDWInwNsNA4ZHOWFw3odpDlwFRj0y3ArQauF6Ssh4cB8qD+u5HcDNwWgXLryrfKu5FsyX4Jv0XAHa2XJSwdKtBfMw77OUsrzs9OdqiiUmUVyaWJ8BMRqGi9CmHpeg44xzhUhsnASBR8Ho1A6cy1wPEGrhBSlbC6kk+AXY3DjwM+aIPbI0tD6ooimQi8G4HarVclLJ0LgJuMw1cBE9rgXD0KaOcZ57WF1CEs734BjDSMmJHq3ad2gDsw63WjX8rvwBhA0b+W1CGsg89PgeYZwwIFrsOA1si6LF2Ni4z99wDXGbgQUpewDlgJnBKeBK1pSnfbKU7sXtewoU+ah9eBM4zDWouFd4K73aNSjcT9hn4LUtfDU1KaeME46SvgkBxuesGdblWlTDDW0G9D6hKWQQomkUxuaeYVfJTaImndF+HD9TqEZwManEXyHnBSDjQ/5e/bo01ptPMGcKaBKwWpSnh4VizsZZymnvWjDLd/lsp2N/Ydm/LuhwauFKQqYXVM6pwieQCYmQM9nAblGqpH8oiJi/T0Wq9CWHMmzZs0d2onW7NApbQicUeuajo0cv2+NBtjQxXCLwFnG7o1FM/fcXfkWratNEz5D1KWsNsafgockbNE0fZFwzK9C+kX9KuBrQQpS1hBREEoEhX5KvZ7REHL6XV1v3V/+03KEL4SWGxYonLxhBac9ml/JEtS9L8sAtVZdwnr5U6d0QjjsFOz+joPPSDripx0NA5YZ5xTCeISvhO43jhhaSJ2SQFO860bDR2vAnpm6RdxCMs7zlxKBqq/LcKqSNGvZF+DiV4T9KrQ5+IQ1oRSD1btRDnzBmMupVSl3jaS94ETI1CVdYdwFb1FezTmlZcPMpRq6P+0gSsF+b8JyzjdcUXjSPS+pJxsPYNGynrWO0F4l2yYny9MiuydZb4iunz7ZOJhH5YDqjRViRrJD1nfvC0Cuuud8HCPbW+lF4yTDUOVzlRf94l0krCqsdUGC9XVGg99Z2BDSCcJyzj3tfAh89OlxhNW4NILftRbK1Kr+dAMrZZ02sMy3p2CPJtq7Gm12DbkoxbNuZRzdzPI6N47w/tCVU3wsIzTFFPTzEjeNiN74wnryx19FKq/kZT6LqtVWVM8LLvmAXdFbLPAdRTwp4HtBWkSYRnnvkhU/uyhaYTHpxHt46lLkgeLRGXmBcArO4OHq3AotadpHi5lfBXwIOEq/7Vu2jPgPPw3lV+rPQ2QU0AAAAAASUVORK5CYII="/>
+                </a>
+                <a href="#" class="text-red-600 hover:text-blue-800 transition duration-200">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABUtJREFUaEPtmlfIXUUQx3+xV4wodqxEsYOKvSAIVlSIhcQuigWx9957FyOKKLGLJnYU0TwEG4piwwJ2EQsoWB5EEd2/7JHNcu7ZnT3nfifmu/NyH+7szvx3duqeCYwzmjDO8DICPK9bfGThkYXnsRPo6kqvCGwGLA8sByzU0Tn9AfwAfA+87n9bbd0W8GTgCGCXVlrkL34OuBOYkb9kTs5SwCcBJzvhq5QKbrnua+Aa4BbrPlbAywBPAltbBQ2J/xVgT+DH3P0tgCe6zd8C1sjdfIz4PnFG2AT4NUeeBfAzLnDslrNpDzzy6X1y5OYCngI8kLNhjzz7AY+k5OcAXhj4DFgptVnP/3/hjLI28GeTHjmADwPu6hHM48DDXv7+wN4NuhzqYsz0toAfBZRv+yC50QGRYIHX9a0jXelB//3Ln7Lw/C7f/gIs1gda50oHA/dGsptu3M/A0sDfg/RNAZZPfNwh2Hf8fl8BC/jCZU2fVurEHATcF/1xLHBrg05r+ZhTy5ICvCMwqyVgnfqNXnHlzDpaAtjd860QMNwPHBgteBvYuEGnbYGXSy3cNh1dDVzm3SLn3Jb0JeNRAfNjwEPerVS3b5PYaF9AcafIwse47mdajqY1PIcA9xSuVYGjqyx/tNKRvsEoAnyqP3GrUKWOJ2oWbQdsBKzm/1PulF/XXUHV6wOvZoNCJwA3l1r4POBiI9qjgdujNbv69LIHsFT030+ul34akL8+H/1XcsNOAa4vBSz/O9sA+H3Xq24Y8SsvXuiKh3UT+7zn+WYGfPO5vPoBsI5Bh9ObbmUqSl8BnGkQFl/lnf1pr5e5x7u+z34x4Fd1paCVS6cB15ZaWFFWG+TQb4CibEgq81Q8WEgTDQWeihYHtHcutQKsk5JP5FDcom0FPOWmEhoaWOg7QL7+ZrDoWcMYacwA6zacESgpK91hQRrwxiWlxjnKGDl0FnDlIMaUD18OaIMcioOForuifAmd6wuWaq0lW1zQlFlSgC1Kn+PGszqgii4Czi9B6zODAmZFFj0uaZLbJWAV9McFSqo3vbsQ8FSXih4M1so1wkDWtK0OWmmwllKALVZSKtkpkLKpr7ZWNoJW9aVJpPJyRa8BW2Tuo+t/6VgAlgylpTCF3Aao8rKQZs3HBwvUSWVNJP2a2LXmkJ2ysMV3tLFaOZWIFW3vq57NMxGrdlZaeTXgl5tYBu4qlK4qtbAV8OcO8CQXnf8KBOoZRpFzywTol9wERi70QsCnIYGGBXq7yqVWeViKDgwAAzTQdYwtoh5WJaKafE04QtJQQM2DZlXy1ZBOdM3GDblIPV+rbkmNgxoIK+kKv1GzSDW1mohV/X8KUB8CH9Xwyj3ieVaOHq36YZ2WxjNW0hOnJg+zrQs9v8rZgQ1AYs+6Odh/S1JBy9qpxLqoeLC0l3pbVomqaUkpNb5ApABrQlFqpUph+aj8Wg3AINJQToWKUtgipUj9ulZDPAWYT1sqEC5XUPoS0PtuNaZdP2M4YFFhdS+jdk3KwvpfIxg9lf4fqPUgXiD7fGqxHnLrpxYJ7PsxzQL68FTDkrrSEraor3aWtUjugVefPeibk9+bZOcA1np9wHJdDyAsIlWV3ZRakAt4Qf/GpJA/N5Kajh2iGr4oSoeLdKVVLirsz02ktKleOetLnlwLVwDH1WdLoVX1YZraMEvb1uWt+Mb32UmfjYVaLRyv38t/yqTXvmF/lSeQeqDT54eadxdRW8ChUM2u9DK4gTt9vRZ0QRoX6b1KL4zfdrFhl4C70Gfoe4wAD/2IexYwsnDPBhi6+JGFh37EPQv4B2x13z2CeuXQAAAAAElFTkSuQmCC"/>
+                </a>
+                <a href="#" class="text-red-600 hover:text-blue-800 transition duration-200">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABNJJREFUaEPtmluoVkUUx38mWCFCZUgJRnZP08iwBxHJRCx8iK6CFxAxFamUonzowUuSkWEYpNgFooeKoiALKhQtKgSxRHxIxUQKqwdNIzMzpeYP+8vjOWf2Xmv27O+gngUf5+Gs23/Wnpl1mT6cZ9TnPMNLL+BzPeK9Ec4c4duB0cCNwJXFb3DxV6Z+AX7u8Hc3sBXYntmP/9U1EeEhwOPAbOCSRMcPhUVZB7xSLEiimq5iOQHfBiwCHgT6ZvLwH+BtYAWg6NemHICvAFYDD9f2Jq7gX+AN4CngSB07dQFPB9YAA+o44ZDVpz4D+NQhcwZrHcDaX/NTDdeUWxrkl6ToSAF8KfAJMCbFYEaZD4FpwHGPTi/gQcBX4SC5wWOkQd4twMSwt/+02vAA1j6VgeFW5W3i2xT8mgSctNjzANZnPNmiNJHnR0C/U8AFwNXhZNadbqGXgCcsjFbAjwEvWxQ6eP4CXgc+BjZE5C4GRoaf9qsytDK6G/i8yr4F8LXA3ipFzv+/CTwZMrLfjHKyLz/K6ABwE3C0jMkCWHtkvNExC9szwHMWxg48FsBi11e4oA5g7Vnt3VykT06fnpesgKVXX8K+mIGqCH8LjPJ6F+HXYXQdsD9B3w/ANUa5tWUJURlglXUq1XLRe8CURGWeCCsRUX7/e3e2ygDnTh3nAK9VAL4ImApc1YlP5aYyPCtFbZUB1gnqMVLljLZGWWEvkJ8BN1cpMvx/M3CXJ8K5P+fKwwTIfRvoDu+SZ8cirLrzBcNKeljU4vk1ItC/6v70GCp4dZV+0VkuBlgHzEMJRspEygDrkFF/KycpsVllBbwTuCWn9aJxF4twE4BfDYs41wr4GKA9kJPaHeFuD67YJ92qWM5mwHuK9vAZGGKA1TTLTe2OsIqILr22GOC/Q4LfLwGxTsWchYZcGBd0fpngy4nQ3r3QuocPJzbRmwD8SKiFdQB5SYnTQCtgT7LeUaeShwlezyr4XyxqZ69a1x7emOh4ExFObS0pTb3HGmGVWPO8SwpEc9gEXS0RRer6BHlNQxZaAc8qRhteO7kjrBmVDtCUWZWqrnesgDXe3OVFWxQAOfewelTfJ/ghEVVfP1kBi0/TOm/DXYOuHREH7y9p2l1WdCY7i2rcemsC4G3FXLqLaFk9vDhwJ81vIg62M/FQj1q9ahfgoWXNsIRVbxdgzZTVwz7oBSx+nbp3JoDrTqRdgNW0fyDmc1XXMjWt6ynAqgG051XedktVgCX0fvGMoW6g2xFhNR4fLXPUAlgjUl0NOknrUNOANYgbVjU6tQAWyPsi14ZnAZoGPDbMir+pcsgKWHo0t9EUMZWaBPw0sNLimAew9Kku1UGWQk0Bdk00vIDVmP+uGFZ7QTcBWBmVPmXl2ybyApZSdRg/Au4wWTjNlBvw+jC31rOpPzx+pABu6dfTQM1wrJQTsF78JQ0K6gAWUM+EIgdgNeZmAh9YV7kzX13A0qec+3nD08O6gHVLLAs3hV7jJVMOwC3jI0Kh/myYEN4b8SYFsAYCbxV69cy4NuUE3HLm8uKzU8dBL2xb5AGsftS7IXPSlaPXPtmoCcAdnVMDQY/G9FBcNWrs1Y7S1uXA18WM2Pq6x70QTQN2O9S0QC/gple4p/X3RrinI9C0/f8AWkvaPVkWNQQAAAAASUVORK5CYII="/>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
